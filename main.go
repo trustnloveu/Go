@@ -12,13 +12,27 @@
 
 package main
 
-import "fmt"
-
 func main() {
+	//! String
 	// var card string = "Ace of Spades"
-	card := newCard()
+	// card := newCard()
 
-	fmt.Println(card)
+	//! Array & Slice
+	// cards := []string{"Ace of Diamonds", newCard()}
+	// cards = append(cards, "Six of Spades")
+
+	//! type
+	cards := deck{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
+	
+	//! Iterate (for + slice)
+	// for i, card := range cards {
+	// 	fmt.Println(i, card);
+	// }
+	
+	//! Print
+	// fmt.Println(cards)
+	cards.print()
 }
 
 func newCard() string {
