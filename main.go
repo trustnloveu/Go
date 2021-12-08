@@ -24,12 +24,12 @@ func main() {
 	//! type
 	cards := deck{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades")
-	
+
 	//! Iterate (for + slice)
 	// for i, card := range cards {
 	// 	fmt.Println(i, card);
 	// }
-	
+
 	//! Print
 	// fmt.Println(cards)
 	cards.print()

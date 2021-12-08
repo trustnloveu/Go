@@ -7,7 +7,7 @@ type deck []string
 
 //! Receiver
 func (d deck) print() {
-	for i, card := range d {
+	for i, card := range d { // 'd' can be replaced with 'this' or 'self'
 		fmt.Println(i, card)
 	}
 }
