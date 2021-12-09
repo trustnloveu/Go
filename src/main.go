@@ -12,8 +12,6 @@
 
 package main
 
-import "fmt"
-
 func main() {
 	//! String
 	// var card string = "Ace of Spades"
@@ -33,13 +31,19 @@ func main() {
 	// 	fmt.Println(i, card);
 	// }
 
+	//! Byte Slice
+	// greeting := "Hello, World"
+	// fmt.Println([]byte(greeting))
+	cards := newDeck()
+
+	//! WriteFile
+	cards.saveToFile("my_cards")
+
 	//! Print
 	// fmt.Println(cards)
 	// cards.print()
+	// fmt.Println(cards.toString())
 
-	//! Byte Slice
-	greeting := "Hello, World"
-	fmt.Println([]byte(greeting))
 }
 
 // func newCard() string {
