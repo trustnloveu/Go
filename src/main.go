@@ -22,8 +22,9 @@ func main() {
 	// cards = append(cards, "Six of Spades")
 
 	//! type
-	cards := deck{"Ace of Diamonds", newCard()}
-	cards = append(cards, "Six of Spades")
+	// cards := deck{"Ace of Diamonds", newCard()}
+	// cards = append(cards, "Six of Spades")
+	cards := newDeck()
 
 	//! Iterate (for + slice)
 	// for i, card := range cards {
@@ -35,6 +36,6 @@ func main() {
 	cards.print()
 }
 
-func newCard() string {
-	return "Five of Diamonds"
-}
+// func newCard() string {
+// 	return "Five of Diamonds"
+// }
