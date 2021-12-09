@@ -12,6 +12,8 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	//! String
 	// var card string = "Ace of Spades"
@@ -24,7 +26,7 @@ func main() {
 	//! type
 	// cards := deck{"Ace of Diamonds", newCard()}
 	// cards = append(cards, "Six of Spades")
-	cards := newDeck()
+	// cards := newDeck()
 
 	//! Iterate (for + slice)
 	// for i, card := range cards {
@@ -33,7 +35,11 @@ func main() {
 
 	//! Print
 	// fmt.Println(cards)
-	cards.print()
+	// cards.print()
+
+	//! Byte Slice
+	greeting := "Hello, World"
+	fmt.Println([]byte(greeting))
 }
 
 // func newCard() string {
