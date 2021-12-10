@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create a new type of 'deck' which is a slice of strings
@@ -27,9 +28,14 @@ func (d deck) saveToFile(filename string) error {
 }
 
 func (d deck) shuffle() {
+	//* Seed Value, which is based on Unix time in a type of int64
+	source := rand.NewSource(time.Now().UnixNano()) // time pkg > Now > UnixNano
+	r := rand.New(source)
+
 	for i := range d {
 		//* Generate random number
-		newPosition := rand.Intn(len(d) - 1)
+		// newPosition := rand.Intn(len(d) - 1)
+		newPosition := r.Intn(len(d) - 1)
 
 		//* Swap
 		d[i], d[newPosition] = d[newPosition], d[i]
