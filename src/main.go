@@ -36,6 +36,9 @@ func main() {
 	// fmt.Println([]byte(greeting))
 	cards := newDeck()
 
+	//! shuffle
+	cards.shuffle()
+
 	//! WriteFile
 	cards.saveToFile("my_cards")
 

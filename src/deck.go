@@ -27,12 +27,12 @@ func (d deck) saveToFile(filename string) error {
 }
 
 func (d deck) shuffle() {
-	for i, card := rang d {
+	for i := range d {
 		//* Generate random number
 		newPosition := rand.Intn(len(d) - 1)
 
 		//* Swap
-		d[i], d[newnewPosition] = d[newPosition], d[i]
+		d[i], d[newPosition] = d[newPosition], d[i]
 	}
 }
 
