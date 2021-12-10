@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
 )
@@ -23,6 +24,16 @@ func (d deck) toString() string {
 
 func (d deck) saveToFile(filename string) error {
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666) // 0666 : Anyone can read and write the file
+}
+
+func (d deck) shuffle() {
+	for i, card := rang d {
+		//* Generate random number
+		newPosition := rand.Intn(len(d) - 1)
+
+		//* Swap
+		d[i], d[newnewPosition] = d[newPosition], d[i]
+	}
 }
 
 //! Not Receiver

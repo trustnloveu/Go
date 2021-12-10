@@ -46,7 +46,6 @@ func main() {
 	// fmt.Println(cards)
 	cards.print()
 	// fmt.Println(cards.toString())
-
 }
 
 // func newCard() string {
