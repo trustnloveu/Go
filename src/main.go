@@ -39,9 +39,12 @@ func main() {
 	//! WriteFile
 	cards.saveToFile("my_cards")
 
+	//! ReadFile
+	cards = newDeckFromFile("my_cards")
+
 	//! Print
 	// fmt.Println(cards)
-	// cards.print()
+	cards.print()
 	// fmt.Println(cards.toString())
 
 }

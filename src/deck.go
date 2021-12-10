@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -42,4 +43,19 @@ func newDeck() deck {
 
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+func newDeckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename) // bs = byteSlice, err = If nothing went wrong, it will have a value of 'nil'
+
+	if err != nil {
+		// Option #1 - log the error and return a call to newDeck()
+
+		// Option #2 - log the error and entirely quit the program
+		fmt.Println("Error ::: ", err)
+		os.Exit(1)
+	}
+
+	s := strings.Split(string(bs), ",") // strings.Split > return []string
+	return deck(s)
 }
