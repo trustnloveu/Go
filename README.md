@@ -1,0 +1,2 @@
+# go-struct
+struct sample
